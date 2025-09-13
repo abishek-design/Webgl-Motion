@@ -4,14 +4,14 @@ import AnimatedSection from '../AnimatedSection';
 const works = [
   {
     id: 1,
-    title: 'UI/UX Design',
-    description: 'Crafting intuitive, user-centric interfaces that are both beautiful and highly functional, with a focus on creating seamless user experiences.',
+    title: 'LANDING PAGE',
+    description: 'A landing page is a focused web page built to drive a specific action, such as sign-ups or sale.',
     imageUrl: 'https://picsum.photos/seed/design/800/600',
   },
   {
     id: 2,
-    title: 'Web Development',
-    description: 'Building robust, scalable, and high-performance web applications from the ground up using modern frameworks and technologies.',
+    title: 'Simple Portfolio',
+    description: 'A portfolio presents your work with smooth transitions for a seamless viewing experience the flow engaging.',
     imageUrl: 'https://picsum.photos/seed/development/800/600',
   },
   {
