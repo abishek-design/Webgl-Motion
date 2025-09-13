@@ -36,7 +36,7 @@ const skills = [
     'HTML', 'CSS', 'JavaScript', 'React', 'WebGL',
     'Supabase', 'API Integration',
     'Java', 'C', 'C++', 'Python',
-    'Git & GitHub', 'AI-Assisted Development', 'Creative Web Design with AI Tools'
+    'Git & GitHub', 'AI-Assisted Development', 
 ];
 
 const WhatIDo: React.FC = () => {
@@ -61,13 +61,13 @@ const WhatIDo: React.FC = () => {
       <div className="mt-16">
         <h3 className="text-3xl font-bold text-center mb-12 text-white text-glow">My Tech Stack</h3>
         <div className="relative w-full overflow-hidden mask-image-linear-gradient">
-            <div className="flex animate-scroll">
-                {[...skills, ...skills].map((skill, index) => (
-                    <div key={index} className="flex-shrink-0 bg-gray-800/60 text-purple-300 text-lg font-medium px-6 py-3 rounded-full mx-4 border border-purple-900/50 whitespace-nowrap">
-                        {skill}
-                    </div>
-                ))}
-            </div>
+      <div className="flex animate-scroll min-w-max">
+        {[...skills, ...skills].map((skill, index) => (
+          <div key={index} className="flex-shrink-0 bg-gray-800/60 text-purple-300 text-lg font-medium px-6 py-3 rounded-full mx-4 border border-purple-900/50 whitespace-nowrap">
+            {skill}
+          </div>
+        ))}
+      </div>
         </div>
       </div>
     </AnimatedSection>
