@@ -38,7 +38,7 @@ const HackingTransition: React.FC<HackingTransitionProps> = ({ onComplete }) => 
     if (phase !== 'text') return;
     // Only speak if not already spoken (prevent duplicate)
     if (!(window as any).__welcomeSpoken) {
-      speak("Welcome to my space");
+      speak("Welcome to my world");
       (window as any).__welcomeSpoken = true;
     }
 
