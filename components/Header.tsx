@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import myphoto from '../image/myphoto.png';
 
 const navLinks = [
   { href: '#home', label: 'Home' },
@@ -80,19 +81,17 @@ const Header: React.FC<HeaderProps> = ({ isHeaderActive }) => {
                   {/* Use import for Vite/Vercel compatibility */}
                   {(() => {
                     try {
-                      // @ts-ignore
-                      const myPhoto = require('../image/myphoto.png');
-                      return (
-                        <img
-                          src={myPhoto}
-                          alt="My Photo"
-                          className="w-full h-full object-cover rounded-full block"
-                          style={{ display: 'block' }}
-                        />
-                      );
-                    } catch {
-                      return null;
-                    }
+                        return (
+                          <img
+                            src={myphoto}
+                            alt="My Photo"
+                            className="w-full h-full object-cover rounded-full block"
+                            style={{ display: 'block' }}
+                          />
+                        );
+                      } catch {
+                        return null;
+                      }
                   })()}
             </div>
             <a 
