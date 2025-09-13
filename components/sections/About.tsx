@@ -1,4 +1,5 @@
 import React from 'react';
+import aboutImg from '../../image/about.png';
 import AnimatedSection from '../AnimatedSection';
 
 const About: React.FC = () => {
@@ -9,21 +10,11 @@ const About: React.FC = () => {
           {/* About image in circular frame */}
           <div className="relative w-full h-full">
             {/* Use import for Vite/Vercel compatibility */}
-            {(() => {
-              try {
-                // @ts-ignore
-                const aboutImg = require('../../image/about.png');
-                return (
-                  <img
-                    src={aboutImg}
-                    alt="About"
-                    className="absolute inset-0 w-full h-full object-cover rounded-full"
-                  />
-                );
-              } catch {
-                return null;
-              }
-            })()}
+            <img
+              src={aboutImg}
+              alt="About"
+              className="absolute inset-0 w-full h-full object-cover rounded-full"
+            />
           </div>
         </div>
         <div>
