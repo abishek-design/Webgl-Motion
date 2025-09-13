@@ -36,7 +36,7 @@ const skills = [
     'HTML', 'CSS', 'JavaScript', 'React', 'WebGL',
     'Supabase', 'API Integration',
     'Java', 'C', 'C++', 'Python',
-    'Git & GitHub', 'AI-Assisted Development', 
+    'Git & GitHub', 'AI-Assisted Development', 'forex analyzer', 
 ];
 
 const WhatIDo: React.FC = () => {
