@@ -1,4 +1,6 @@
 import React from 'react';
+import myphoto from '../../image/myphoto.png';
+
 
 interface HomeProps {
   isHeaderActive: boolean;
@@ -40,23 +42,13 @@ const Home: React.FC<HomeProps> = ({ isHeaderActive }) => {
                     `}
                 >
                     {/* User's image will go here */}
-                    {/* Use import for Vite/Vercel compatibility */}
-                    {(() => {
-                      try {
-                        // @ts-ignore
-                        const myPhoto = require('../../image/myphoto.png');
-                        return (
-                          <img
-                            src={myPhoto}
-                            alt="My Photo"
-                            className="w-full h-full object-cover rounded-full"
-                            style={{ position: 'absolute', top: 0, left: 0 }}
-                          />
-                        );
-                      } catch {
-                        return null;
-                      }
-                    })()}
+                    {/* Use ES6 import for best compatibility */}
+                    <img
+                      src={myphoto}
+                      alt="My Photo"
+                      className="w-full h-full object-cover rounded-full"
+                      style={{ position: 'absolute', top: 0, left: 0 }}
+                    />
                 </div>
             </div>
         </div>
