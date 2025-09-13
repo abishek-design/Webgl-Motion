@@ -77,13 +77,23 @@ const Header: React.FC<HeaderProps> = ({ isHeaderActive }) => {
                 bg-black/20
                 ${isHeaderActive ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}
             `}>
-                  {/* User's image in small frame */}
-                  <img
-                    src="/image/myphoto.png"
-                    alt="My Photo"
-                    className="w-full h-full object-cover rounded-full block"
-                    style={{ display: 'block' }}
-                  />
+                  {/* Use import for Vite/Vercel compatibility */}
+                  {(() => {
+                    try {
+                      // @ts-ignore
+                      const myPhoto = require('../image/myphoto.png');
+                      return (
+                        <img
+                          src={myPhoto}
+                          alt="My Photo"
+                          className="w-full h-full object-cover rounded-full block"
+                          style={{ display: 'block' }}
+                        />
+                      );
+                    } catch {
+                      return null;
+                    }
+                  })()}
             </div>
             <a 
               href="#home" 
