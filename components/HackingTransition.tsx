@@ -5,7 +5,7 @@ const transitionPhrases = [
   "CONNECTING_TO_SERVER...",
   "DECRYPTING_ASSETS...",
   "COMPILING_SCRIPTS...",
-  "RENDERING_UNIVERSE...",
+  "YOUR ARE HACKED!!!!!!!...",
 ];
 
 interface HackingTransitionProps {
