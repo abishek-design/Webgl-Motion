@@ -8,11 +8,22 @@ const About: React.FC = () => {
         <div className="mx-auto w-80 h-80 md:w-96 md:h-96 rounded-full card-glow bg-black/20 border-2 border-purple-900/40">
           {/* About image in circular frame */}
           <div className="relative w-full h-full">
-            <img
-              src="/image/about.png"
-              alt="About"
-              className="absolute inset-0 w-full h-full object-cover rounded-full"
-            />
+            {/* Use import for Vite/Vercel compatibility */}
+            {(() => {
+              try {
+                // @ts-ignore
+                const aboutImg = require('../../image/about.png');
+                return (
+                  <img
+                    src={aboutImg}
+                    alt="About"
+                    className="absolute inset-0 w-full h-full object-cover rounded-full"
+                  />
+                );
+              } catch {
+                return null;
+              }
+            })()}
           </div>
         </div>
         <div>
